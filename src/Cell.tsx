@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const styles = {
     height: "40px",
@@ -13,11 +13,11 @@ const styles = {
 
 interface Prop {
     children?: number;
-    action?: () => void
 }
 
-
 export const Cell: React.FC<Prop> = ({
-   children = 0,
-    action= () => alert(children)
-}) => <div onClick={action} style={styles}><div>{children}</div></div>;
+                                         children = 0,
+                                     }) => {
+    const [visible, setVisible] = useState<boolean>(false);
+    return (<div onClick={() => setVisible(true)} style={styles}>{visible && children}</div>);
+};
