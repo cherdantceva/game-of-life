@@ -1,12 +1,4 @@
-import serializer from "jest-emotion";
+import Enzyme from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
 
-expect.addSnapshotSerializer(serializer);
-
-jest.mock(
-  "@/web-worker/index.worker",
-  () =>
-    class Worker {
-      onmessage = () => null;
-      postMessage = () => null;
-    }
-);
+Enzyme.configure({ adapter: new Adapter() });

@@ -1,31 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
 
 import { Cell } from "./Cell";
-
 interface Prop {
-    cells?: number;
+  cells?: number;
 }
 
-export class Field extends Component<Prop> {
-
-    renderCell(i:number) {
-        return <Cell children={i}/>;
-    }
-
-    render() {
-        return (
-            <div>
-                {this.renderCell(0)}
-                {this.renderCell(1)}
-                {this.renderCell(2)}
-                {this.renderCell(3)}
-                {this.renderCell(4)}
-                {this.renderCell(5)}
-                {this.renderCell(6)}
-                {this.renderCell(7)}
-                {this.renderCell(8)}
-                {this.renderCell(9)}
-            </div>
-        );
-    }
-}
+export const Field: React.FC<Prop> = () => {
+  return (
+    <div>
+      <Cell childrenNumber={0} />
+      <Cell childrenNumber={1} />
+      <Cell childrenNumber={2} />
+      <Cell childrenNumber={3} />
+      <Cell childrenNumber={4} />
+      <Cell childrenNumber={5} />
+      <Cell childrenNumber={6} />
+      <Cell childrenNumber={7} />
+      <Cell childrenNumber={8} />
+      <Cell childrenNumber={9} />
+      <Cell childrenNumber={10} />
+    </div>
+  );
+};
