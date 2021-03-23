@@ -4,12 +4,12 @@
   "description": "react/typescript game of life",
   "main": "index.js",
   "scripts": {
-    "start": "npx webpack serve --mode development --open --hot",
-    "build": "npx webpack --mode production",
-    "test": "npx jest",
+    "start": "webpack serve --mode development --open --hot",
+    "build": "webpack --mode production",
+    "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix ./",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix ./",
     "check": "npm run lint && npm test"
   },
   "husky": {
