@@ -8,6 +8,6 @@ export default {
   decorators: [withKnobs],
 };
 
-export const CellStory: React.FC<Record<string, never>> = () => {
+export const FieldStory: React.FC<Record<string, never>> = () => {
   return <Field />;
 };
